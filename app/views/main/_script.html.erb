@@ -1,0 +1,32 @@
+<script>
+
+    $('body').on('click', '.page-scroll a', function(event) {
+    	event.preventDefault();
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000);
+    });
+
+	// init controller
+	var controller = new ScrollMagic.Controller();
+	var tween = new TweenMax.fromTo(".arrow_down", 0.8,
+									{top: 0},
+									{top: 20, repeat: -1, yoyo: true, ease: Circ.easeInOut});
+	// create a scene
+	var scene = new ScrollMagic.Scene({
+  		triggerElement: '.carousel', // starting scene, when reaching this element	
+	    }).setTween(tween)
+	      .addTo(controller); // assign the scene to the controller
+	// init controller
+	/*
+	controller = new ScrollMagic();	
+	new ScrollScene({triggerElement: ".index_top_container"})
+								.setTween(TweenMax.fromTo(".top_arrow_container", 0.6,
+									{top: '0px'},
+									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
+								))
+								.addTo(controller);	
+	 */
+	
+</script>
