@@ -6,7 +6,19 @@
     filter: grayscale(100%); /* Change the color of the map to black and white * /
 }
 </style>
+<div class="container-fluid">
+	<div class="row" style="background: #c5a063; height: 15px;">
+    	<div class="col-lg-12">
+        </div>
+    </div>
+</div>
 <div id="googleMap"></div>
+<div class="container-fluid">
+	<div class="row" style="background: #c5a063; height: 15px;">
+    	<div class="col-lg-12">
+        </div>
+    </div>
+</div>
 <!-- Add Google Maps -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
@@ -15,7 +27,7 @@ var styles = [{"featureType":"all","elementType":"all","stylers":[{"invert_light
 function initialize() {
 var mapProp = {
 	styles: styles,
-	center:myCenter,
+	center: myCenter,
 	zoom:17,
 	scrollwheel: false,
 	draggable: false,
@@ -26,6 +38,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
 var marker = new google.maps.Marker({
 	position: myCenter,
+	icon: '<%= image_url 'marker_s.png' %>'	
 });
 
 marker.setMap(map);

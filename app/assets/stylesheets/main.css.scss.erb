@@ -1,6 +1,7 @@
 body {
     position: relative;
     overflow-x: hidden;
+    background: #1a1a1a;
 }
 body,
 html {height: 100%;}
@@ -140,5 +141,139 @@ html {height: 100%;}
 @media (min-width: $screen-lg-min) {
 }
 //===============================about===========================//
-
+.about{
+  background-image: url('<%= asset_path 'about/about_bg.png' %>');
+  background-size: cover; 
+  background-position: center center;
+  position: relative;
+}
+.about_en{
+  position: relative;  
+  top: 120px;  
+  font-size: 45px;
+  font-style: italic; 
+  font-family:Georgia; 
+}
+.about_ch{
+    color: #585757;
+    position: relative;  
+    font-size: 18px;   
+    top: 120px;  
+    //visibility: hidden;   
+    position: relative;     
+}
+.about_ch h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    .text {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 1px solid #585757;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+.about_since{
+  position: relative;  
+  top: 150px;  
+  font-size: 20px; 
+  letter-spacing: 2px; 
+}
+.about_description{
+  position: relative;  
+  top: 180px;  
+  font-size: 16px;    
+}
 //===============================about_manager===========================//
+.about_manager_image {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: $screen-sm-min) {
+  .about_manager_image {
+    height: 480px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+.about_manager_image > * {
+  height: 250%;
+  position: relative;
+  top: 0%;
+}
+.about_manager_image > div{
+  background-image: url('<%= asset_path 'about/manager.jpg' %>');
+  background-size: cover; 
+  background-position: center center;
+}
+.about_manager_quote{
+  border-top: 1px solid #c5a063;
+  border-bottom: 1px solid #c5a063;  
+  margin-top: 60px;
+  padding: 15px;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+//===============================timeline===========================//
+.timeline_container{
+  background-image: url('<%= asset_path 'timeline_bg.jpg' %>');
+  background-size: cover; 
+  background-position: center center;
+  position: relative;  
+}
+.timeline_en{
+  font-size: 45px;
+  font-style: italic; 
+  font-family:Georgia;
+  color: #c5a063;   
+}
+.timeline_ch{
+    color: #585757;
+    font-size: 18px;       
+}
+.timeline_ch h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    .text {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 1px solid #585757;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+//===============================footer===========================//
+.footer_diamond{
+  height: 200px;
+}

@@ -1,5 +1,4 @@
 <script>
-
     $('body').on('click', '.page-scroll a', function(event) {
     	event.preventDefault();
         var $anchor = $(this);
@@ -7,26 +6,37 @@
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1000);
     });
-
+    
+    
+	// function to be used to retrieve variable
+	function getWindowHeight() {
+		return windowHeight;
+	}	
+	// update window height on resize
+	$(window).on("resize", function () {
+			windowHeight = $(window).innerHeight();
+	});	
 	// init controller
 	var controller = new ScrollMagic.Controller();
+	//top
 	var tween = new TweenMax.fromTo(".arrow_down", 0.8,
 									{top: 0},
 									{top: 20, repeat: -1, yoyo: true, ease: Circ.easeInOut});
-	// create a scene
-	var scene = new ScrollMagic.Scene({
-  		triggerElement: '.carousel', // starting scene, when reaching this element	
+	new ScrollMagic.Scene({
+  		triggerElement: '.carousel', 	
 	    }).setTween(tween)
-	      .addTo(controller); // assign the scene to the controller
-	// init controller
-	/*
-	controller = new ScrollMagic();	
-	new ScrollScene({triggerElement: ".index_top_container"})
-								.setTween(TweenMax.fromTo(".top_arrow_container", 0.6,
-									{top: '0px'},
-									{top: '20px', repeat: -1, yoyo: true, ease: Circ.easeInOut}
-								))
-								.addTo(controller);	
-	 */
-	
+	      .addTo(controller); 
+	//about      
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+	function move (what, progress) {
+	    var to = progress * 30;
+	    TweenMax.to(what, 1, {y: '-'+to + "%", overwrite: 5, force3D: true});
+	}
+	new ScrollMagic.Scene({triggerElement: "#parallax1"})
+                .on("progress", function (e) {
+                    move ("#parallax1 > div", e.progress);
+                })
+                .addTo(controller);		      
+	      
+	      
 </script>
