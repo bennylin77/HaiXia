@@ -22,12 +22,32 @@
 	var tween = new TweenMax.fromTo(".arrow_down", 0.8,
 									{top: 0},
 									{top: 20, repeat: -1, yoyo: true, ease: Circ.easeInOut});
-	new ScrollMagic.Scene({
-  		triggerElement: '.carousel', 	
-	    }).setTween(tween)
-	      .addTo(controller); 
-	//about      
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
+	//new ScrollMagic.Scene({
+  	//		triggerElement: '.carousel', 	
+	//	}).setTween(tween)
+	//	.addTo(controller); 
+	      
+	//var tween_2 = new TweenMax.from(".about_en", 2, {top: "30px", ease: Linear.easeNone})	      
+      
+ 	      
+	
+	//about   
+	tween = new TweenMax.from(".about_en", 2, {top: "50px", ease: Linear.easeNone})	      
+	new ScrollMagic.Scene({triggerElement: "#section_about"})
+				  .setTween(tween)
+				  .addTo(controller)	
+	  
+	tween = new TimelineLite();
+	tween.to(".about_ch", 5, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".about_since", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".about_description", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: "#section_about"})
+				  .setTween(tween)
+				  .addTo(controller) 
+	
+	//about_manager
+	var controller_manager = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
 	function move (what, progress) {
 	    var to = progress * 30;
 	    TweenMax.to(what, 1, {y: '-'+to + "%", overwrite: 5, force3D: true});
@@ -36,7 +56,6 @@
                 .on("progress", function (e) {
                     move ("#parallax1 > div", e.progress);
                 })
-                .addTo(controller);		      
-	      
+       	        .addTo(controller_manager);		          
 	      
 </script>

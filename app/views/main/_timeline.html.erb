@@ -8,35 +8,36 @@
         <li>
           <div class="timeline-badge"></div>
           <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            <div class="timeline-body text-center">
+              <div class="pull-right timeline_circle_image"></div>
+              <div class="timeline_sub_title">
+              	<div>河北省農業考察團</div>
+              	<div><em style="font-family:Georgia;">2014 - 04</em></div>
+              </div>              
             </div>
           </div>
         </li>
         <li class="timeline-inverted">
           <div class="timeline-badge"></div>
           <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-              <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+            <div class="timeline-body text-center">
+              <div class="pull-right timeline_circle_image"></div>
+              <div class="timeline_sub_title">
+              	<div>河北省農業考察團</div>
+              	<div><em style="font-family:Georgia;">2014 - 04</em></div>
+              </div>              
             </div>
           </div>
         </li>
         <li>
           <div class="timeline-badge"></div>
           <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            <div class="timeline-body text-center">
+              <div class="pull-right timeline_circle_image"></div>
+              <div class="timeline_sub_title">
+              	<div>河北省農業考察團</div>
+              	<div><em style="font-family:Georgia;">2014 - 04</em></div>
+              </div>              
             </div>
           </div>
         </li>
@@ -124,7 +125,7 @@
         }
 
         .timeline > li > .timeline-panel {
-            width: 46%;
+            width: 43%;
             float: left;
             border: 3px solid #c5a063;
             border-radius: 2px;
@@ -233,6 +234,24 @@
     margin-top: 0;
     color: inherit;
 }
+.timeline-body{
+	color: #c5a063;
+}
+
+.timeline_sub_title{
+	position: relative;
+	top: 30px;
+	font-size: 20px;
+}
+
+.timeline_circle_image{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-image: url('<%= asset_path 'about/manager.jpg' %>');
+  background-size: cover; 
+  background-position: center center;	
+}
 
 .timeline-body > p,
 .timeline-body > ul {
@@ -255,7 +274,7 @@
     }
 
     ul.timeline > li > .timeline-badge {
-        left: 15px;
+        left: 14px;
         margin-left: 0;
         top: 16px;
     }
@@ -266,8 +285,8 @@
 
         ul.timeline > li > .timeline-panel:before {
             border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
+            border-right-width: 18px;
+            left: -18px;
             right: auto;
         }
 
