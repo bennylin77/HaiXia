@@ -22,21 +22,11 @@
 	var tween = new TweenMax.fromTo(".arrow_down", 0.8,
 									{top: 0},
 									{top: 20, repeat: -1, yoyo: true, ease: Circ.easeInOut});
-	//new ScrollMagic.Scene({
-  	//		triggerElement: '.carousel', 	
-	//	}).setTween(tween)
-	//	.addTo(controller); 
-	      
-	//var tween_2 = new TweenMax.from(".about_en", 2, {top: "30px", ease: Linear.easeNone})	      
-      
- 	      
-	
 	//about   
 	tween = new TweenMax.from(".about_en", 2, {top: "50px", ease: Linear.easeNone})	      
 	new ScrollMagic.Scene({triggerElement: "#section_about"})
 				  .setTween(tween)
-				  .addTo(controller)	
-	  
+				  .addTo(controller)	  
 	tween = new TimelineLite();
 	tween.to(".about_ch", 5, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".about_since", 1, {autoAlpha: 1, ease: Linear.easeNone})
@@ -45,7 +35,6 @@
 	new ScrollMagic.Scene({triggerElement: "#section_about"})
 				  .setTween(tween)
 				  .addTo(controller) 
-	
 	//about_manager
 	var controller_manager = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "250%"}});
 	function move (what, progress) {
@@ -56,6 +45,31 @@
                 .on("progress", function (e) {
                     move ("#parallax1 > div", e.progress);
                 })
-       	        .addTo(controller_manager);		          
+       	        .addTo(controller_manager);	
+       	        	
+	//tween = new TimelineLite();       	         
+	//tween.fromTo(".horizontal_line_1", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})
+	//	 .fromTo(".horizontal_line_2", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  		  	 
+
+       	         
+	tween = new TimelineLite();
+	tween.fromTo(".horizontal_line_1", 2, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})
+		 .fromTo(".horizontal_line_2", 2, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  		  	
+		 .to(".about_manager_quote_content", 3, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".about_manager_content_1", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".about_manager_content_2", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".about_manager_content_3", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".about_manager_content_4", 1, {autoAlpha: 1, ease: Linear.easeNone})	
+		 .to(".about_manager_position", 1, {autoAlpha: 1, ease: Linear.easeNone})	
+		 .from(".about_manager_position", 4, {top: "45px", ease: Linear.easeNone})	      
+	//tween = new TweenMax.from(".about_manager_position", 2, {top: "50px", ease: Linear.easeNone})	      
+		 
+		 	 
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: ".about_manager_content"})
+				  .setTween(tween)
+				  .addTo(controller)        	        
+       	        
+       	                 
 	      
 </script>
