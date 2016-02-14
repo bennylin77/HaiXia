@@ -5,7 +5,21 @@
 		<h2 class="no-background"><span class="text">承辦經驗</span></h2>
 	</div>	   	
     <ul class="timeline">
-        <li>
+    	<% Experience.all.order('date').each_with_index do |e, i| %>
+			<li <%if i%2 != 0 %><%= "class='timeline-inverted'".html_safe%><%end%>>
+		    	<div class="timeline-badge"></div>
+		          <div class="timeline-panel">
+		            <div class="timeline-body text-center">
+		              <div class="pull-right timeline_circle_image" style="background-image: url('<%= e.image.url %>');"></div>
+		              <div class="timeline_sub_title">
+		              	<div><%=e.title %></div>
+		              	<div><em style="font-family:Georgia;"><%=e.date.strftime("%Y - %m") %></em></div>
+		              </div>              
+		            </div>
+		    	</div>
+			</li>  
+    	<%end%>
+        <!--<li>
           <div class="timeline-badge"></div>
           <div class="timeline-panel">
             <div class="timeline-body text-center">
@@ -41,7 +55,7 @@
             </div>
           </div>
         </li>
-        <!--<li>
+        <li>
           <div class="timeline-badge"></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -248,7 +262,6 @@
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background-image: url('<%= asset_path 'about/manager.jpg' %>');
   background-size: cover; 
   background-position: center center;	
 }

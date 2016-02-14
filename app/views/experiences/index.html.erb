@@ -1,0 +1,32 @@
+<div style="min-height: 1500px; color: #c5a063;" class="container">
+<br><br><br><br><br><br>
+<div class="btn-group" role="group" aria-label="...">
+  <%= link_to '承辦經驗', experiences_path, class: 'btn btn-default'  %>	
+</div>
+<br><br>
+<h1>承辦經驗列表</h1>
+<table class="table table-striped">
+    <tr>
+      <th>團名</th>
+      <th>描述</th>
+      <th>時間</th>
+      <th>照片</th>            
+      <th colspan="3"></th>
+    </tr>
+    <% @experiences.each do |experience| %>
+      <tr class="active">
+        <td><%= experience.title %></td>
+        <td><%= experience.description %></td>
+        <td><%= experience.date.strftime("%Y/%m") %></td>
+        <td><%= image_tag experience.image.url, size: '100x100' %></td>
+        <td>
+        <%= link_to '詳細', experience, class: 'btn btn-default' %>
+        <%= link_to '編輯', edit_experience_path(experience), class: 'btn btn-default' %>
+        <%= link_to '刪除', experience, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+</table>
+
+<%= link_to '新增經驗', new_experience_path, class: 'btn btn-info'  %>
+</div>

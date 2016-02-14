@@ -1,0 +1,42 @@
+<%= form_for(@experience, html: {class: "form-horizontal", role: "form"}) do |f| %>
+  <% if @experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @experience.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">團名</label>
+		<div class="col-sm-10">
+			<%= f.text_field :title, placeholder: 'ex. 河北農業參訪團', class: "form-control" %>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">描述</label>
+		<div class="col-sm-10">
+			<%= f.text_area :description, placeholder: 'ex. 河北貴賓參訪台灣精緻農業...etc', class: "form-control", rows: '5' %>
+		</div>
+	</div>	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">時間</label>
+		<div class="col-sm-10">
+			<%= f.date_select :date %>		
+		</div>	
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">照片(1張)</label>
+		<div class="col-sm-10">
+			<%= f.file_field :image %>		
+		</div>	
+	</div>					
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<%= f.submit '儲存',  class: "btn btn-default", style: 'margin-right: 5px;'  %>
+		</div>
+	</div>	
+<% end %>

@@ -1,0 +1,25 @@
+<div style="height: 3000px; color: #c5a063;" class="container">
+<br><br><br><br><br><br><br><br>
+<p id="notice"><%= notice %></p>  
+<p>
+  <strong>團名:</strong>
+  <%= @experience.title %>
+</p>
+
+<p>
+  <strong>描述:</strong>
+  <%= @experience.description %>
+</p>
+
+<p>
+  <strong>時間:</strong>
+  <%= @experience.date.strftime("%Y/%m") %>
+</p>
+
+<p>
+  <strong>照片:</strong>
+  <%= image_tag @experience.image.url, width: '500px' %>
+</p>
+<%= link_to '編輯工作', edit_experience_path(@experience), class: 'btn btn-default' %> |
+<%= link_to '回上一頁', experiences_path, class: 'btn btn-default' %>
+</div>
