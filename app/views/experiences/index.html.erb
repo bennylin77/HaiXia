@@ -18,7 +18,7 @@
         <td><%= experience.title %></td>
         <td><%= experience.description %></td>
         <td><%= experience.date.strftime("%Y/%m") %></td>
-        <td><%= image_tag experience.image.url, size: '100x100' %></td>
+        <td><%= image_tag experience.image.url, height: '200' %></td>
         <td>
         <%= link_to '詳細', experience, class: 'btn btn-default' %>
         <%= link_to '編輯', edit_experience_path(experience), class: 'btn btn-default' %>
