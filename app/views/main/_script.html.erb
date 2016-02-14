@@ -53,8 +53,8 @@
 
        	         
 	tween = new TimelineLite();
-	tween.fromTo(".horizontal_line_1", 2, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})
-		 .fromTo(".horizontal_line_2", 2, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  		  	
+	tween.fromTo(".horizontal_line_1", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})
+		 .fromTo(".horizontal_line_2", 1, {width:0, ease: Linear.easeNone}, {width:'100%', ease: Linear.easeNone})	  		  	
 		 .to(".about_manager_quote_content", 3, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".about_manager_content_1", 1, {autoAlpha: 1, ease: Linear.easeNone})
 		 .to(".about_manager_content_2", 1, {autoAlpha: 1, ease: Linear.easeNone})
@@ -69,7 +69,17 @@
 	new ScrollMagic.Scene({triggerElement: ".about_manager_content"})
 				  .setTween(tween)
 				  .addTo(controller)        	        
-       	        
-       	                 
-	      
+    	//top
+	var tween = new TweenMax.fromTo(".footer_diamond_left", 2,
+									{left: '60%'},
+									{left: '50%'});   
+	new ScrollMagic.Scene({triggerElement: "#section_contact"})
+				  .setTween(tween)
+				  .addTo(controller) 																	        
+	var tween = new TweenMax.fromTo(".footer_diamond_right", 2,
+									{right: '60%'},
+									{right: '50%'});	  
+	new ScrollMagic.Scene({triggerElement: "#section_contact"})
+				  .setTween(tween)
+				  .addTo(controller) 									    
 </script>
