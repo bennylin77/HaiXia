@@ -86,9 +86,9 @@
             transition: width .2s ease-in;
 
 }
-.sidebar-nav li:first-child a {
-    color: #fff;
-    background-color: #1a1a1a;
+.sidebar-nav li:first-child:before {
+    //color: #fff;
+    background-color: #c5a063;
 }
 .sidebar-nav li:nth-child(2):before {
     background-color: #c5a063;

@@ -273,9 +273,137 @@ html {height: 100%;}
     padding-top: 70px;  
   }
 }
+
+
+
+//===============================taiwan===========================//
+.taiwan_en{
+  font-size: 45px;
+  font-style: italic; 
+  font-family:Georgia;
+  color: #f1f1f1;;   
+}
+.taiwan_ch{
+    color: #f1f1f1;; 
+    font-size: 18px;       
+}
+.taiwan_ch h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    .text {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 1px solid #f1f1f1;;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+
+
+
+
+
+
+//===============================china_north_korea===========================//
+.china_north_korea_container{
+  background: #1a1a1a;  
+}
+.china_north_korea_words{
+  height: 300px;
+}
+.china_north_korea_en{
+  font-size: 45px;
+  font-style: italic; 
+  font-family:Georgia;
+  color: #c5a063;   
+}
+.china_north_korea_ch{
+    color: #c5a063; 
+    font-size: 18px;       
+}
+.china_north_korea_ch h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    .text {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 1px solid #c5a063;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+.china_north_korea_sub_title{
+  color: #f1f1f1;
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+.china_north_korea_mountain{
+  width: 200px;
+  margin-top: 10px;
+  visibility: hidden;  
+}
+
+.china_north_korea_content{
+   color: #c5a063;
+   font-size: 20px; 
+   height: 150px;
+   width: 150px;
+   padding-top: 60px;
+   border: 2.5px solid #c5a063;
+   border-radius: 50%;
+   margin: 0 auto;
+   margin-top: 40px;
+   visibility: hidden;
+}
+
+
+.china_background{
+  background-image: url(<%=asset_path 'china_n_korea/china.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;  
+  padding: 150px 0px;  
+}
+.n_korea_background{
+  background-image: url(<%=asset_path 'china_n_korea/n_korea.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;  
+  padding: 150px 0px;  
+}
 //===============================timeline===========================//
 .timeline_container{
-  background-image: url('<%= asset_path 'timeline_bg.jpg' %>');
+  //background-image: url('<%= asset_path 'timeline_bg.jpg' %>');
   background-size: 100% 800px; 
   background-attachment: fixed;  
   background-repeat: no-repeat;  

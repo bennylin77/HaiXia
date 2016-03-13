@@ -62,13 +62,42 @@
 		 .to(".about_manager_content_4", 1, {autoAlpha: 1, ease: Linear.easeNone})	
 		 .to(".about_manager_position", 1, {autoAlpha: 1, ease: Linear.easeNone})	
 		 .from(".about_manager_position", 4, {top: "45px", ease: Linear.easeNone})	      
-	//tween = new TweenMax.from(".about_manager_position", 2, {top: "50px", ease: Linear.easeNone})	      
-		 
-		 	 
+	//tween = new TweenMax.from(".about_manager_position", 2, {top: "50px", ease: Linear.easeNone})	       
 	tween.timeScale(3) //play faster   
 	new ScrollMagic.Scene({triggerElement: ".about_manager_content"})
 				  .setTween(tween)
-				  .addTo(controller)        	        
+				  .addTo(controller)    
+				  
+
+
+
+	var tween = new TweenMax.from(".china_north_korea_words_2", 1, {scale:0});   
+	new ScrollMagic.Scene({triggerElement: ".china_background"})
+				  .setTween(tween)
+				  .addTo(controller) 	
+	tween = new TimelineLite()
+	tween.to(".china_north_korea_mountain_2", 1, {autoAlpha: 1, ease: Linear.easeNone})   
+		 .to(".china_north_korea_content_2", 1, {autoAlpha: 1, ease: Linear.easeNone});   
+	new ScrollMagic.Scene({triggerElement: ".china_north_korea_mountain_2"})
+				  .setTween(tween)
+				  .addTo(controller) 				  
+				  
+				  
+	var tween = new TweenMax.from(".china_north_korea_words_1", 1, {scale:0});   
+	new ScrollMagic.Scene({triggerElement: ".n_korea_background"})
+				  .setTween(tween)
+				  .addTo(controller) 	
+	tween = new TimelineLite()
+	tween.to(".china_north_korea_mountain_1", 1, {autoAlpha: 1, ease: Linear.easeNone})   
+		 .to(".china_north_korea_content_1", 1, {autoAlpha: 1, ease: Linear.easeNone});   
+	new ScrollMagic.Scene({triggerElement: ".china_north_korea_mountain_1"})
+				  .setTween(tween)
+				  .addTo(controller) 
+
+				  
+				  
+				  			  
+  	        
     	//top
 	var tween = new TweenMax.fromTo(".footer_diamond_left", 2,
 									{left: '60%'},
