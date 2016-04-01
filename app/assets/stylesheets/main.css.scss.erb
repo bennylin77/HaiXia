@@ -402,7 +402,7 @@ html {height: 100%;}
     width: 100%;  
     height: 100%;
     //visibility: hidden;
-    background-color: rgba(0, 0, 0, .1);    
+    background-color: rgba(0, 0, 0, .3);    
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;  
 } 
@@ -468,17 +468,106 @@ html {height: 100%;}
     color: #f2f2f2; 
 } 
 .taiwan_section_health_title{
-  font-size: 30px;
+  font-size: 25px;
   border-bottom: 3px solid #f2f2f2; 
 }
 .taiwan_section_health_description{
   margin-top: 20px;
-  font-size:  18px;
+  font-size:  16px;
 }
 .taiwan_cross{
   float: right;
 }
 
+.modal-header{
+  background-image: url(<%=asset_path 'taiwan/tw_modal_top_bg.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;     
+}
+
+.modal-title{
+  font-size: 80px;
+  font-style: italic; 
+  font-family:Georgia; 
+  letter-spacing: 5px;
+  margin-top: 30px;
+  margin-left: 30px;  
+  text-align: center;    
+  width: 300px;
+  color: #c5a063;    
+}
+
+.modal-body{
+  background-image: url(<%=asset_path 'taiwan/tw_modal_bg.jpg'%>);  
+  background-attachment: scroll;
+  background-position: center center;   
+  background-size: cover;    
+}
+.taiwan_modal_ch{
+    color: #1a1a1a; 
+    font-size: 18px;       
+}
+.taiwan_modal_ch h2.no-background {
+    position: relative;
+    overflow: hidden;  
+    .text {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        font-size: 25px;
+        letter-spacing: 2px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.5em;
+            border-top: 1px solid #1a1a1a;
+        }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
+}
+.diamond {
+  margin: 40px auto;
+  width:90px;
+  height:90px;
+  background: #1a1a1a; 
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
+.diamond-inner {
+  color: #f1f1f1;
+  font-style: italic; 
+  font-family:Georgia; 
+  font-size:1.2em;
+  line-height:1.4em;
+  transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  width:90px;
+  height:90px;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+.modal_inner_content{
+  margin-top: 30px;
+  font-weight: bold;
+}
+.tw_modal_bag{
+  width: 87px;
+}
+.tw_modal_bus{
+  margin-top: 28px;
+  width: 100px;
+}
 
 //===============================china_north_korea===========================//
 .china_north_korea_container{
