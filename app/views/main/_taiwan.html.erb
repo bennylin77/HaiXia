@@ -8,7 +8,7 @@
 	-->
     </div>
 </div>
-<div class="row" style="">
+<div class="row" id="section_products_TW_1">
 	<div class="col-sm-8 taiwan_section_container_1">
     	<div class="taiwan_section_top">
 	    	<div class="taiwan_section_top_inner">
@@ -88,7 +88,7 @@
 		</div>                    		
     </div>     
 </div>
-<div class="row" style="">
+<div class="row" id="section_products_TW_2">
 	<div class="col-sm-4 taiwan_section_container_1">
     	<div class="taiwan_section_image" style="background-image: url(<%=asset_path 'taiwan/tw_2_4.jpg'%>);" data-toggle="modal" data-target="#myModal">
 				<div class="index_taiwan_category text-center">
@@ -139,7 +139,7 @@
 		</div>                    		
     </div>     
 </div>
-<div class="row" style="">
+<div class="row" id="section_products_TW_3">
 	<div class="col-sm-12 taiwan_section_container_1">
     	<div class="taiwan_section_top">
 	    	<div class="taiwan_section_top_inner">
@@ -181,7 +181,7 @@
 		</div>                    		
     </div>     
 </div>
-<div class="row" style="">
+<div class="row"  id="section_products_TW_4">
 	<div class="col-sm-8 taiwan_section_container_1">
     	<div class="taiwan_section_top" style="background: #f1f1f1;">
 	    	<div class="taiwan_section_top_inner">
@@ -240,79 +240,4 @@
 		</div>                    		
     </div>                
 </div>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" style="color: #f1f1f1; opacity: 1">&times;</button>
-        
-        <h4 class="modal-title">Living</h4>
-        
-        
-      </div>
-      <div class="modal-body">
-      	
-
-		<div class="row" style="padding-top: 30px; padding-bottom: 30px;" >
-			<div class="col-md-10 col-md-offset-1">
-			<div class="taiwan_modal_ch text-center">
-				<h2 class="no-background"><span class="text">東線15天</span></h2>
-			</div>	  	
-		    </div>
-		</div>
-
-
-      	
-      	
- 		<div class="row text-center" style=""> 
-			<div class="col-sm-2 col-sm-offset-1">  			
-				<div class="diamond">
-						<div class="diamond-inner"> DAY 1 </div>
-				</div>						
-				<div class="modal_inner_content">	
-				<ul>
-				<li>大陆桃园</li>
-				<li>新竹南园</li>
-				<li>养生假期</li>
-				<li>心灵养生课程</li>
-				</ul>
-				</div>
-        	</div>
-			<div class="col-sm-2">     
-				<%= image_tag 'taiwan/tw_modal_bag.png', class: 'tw_modal_bag hidden-xs'%> 
-        	</div> 
-			<div class="col-sm-2">   
-				<div class="diamond">
-						<div class="diamond-inner"> DAY 2 </div>
-				</div>		
-				<div class="modal_inner_content">
-				<ul>				  
-				<li>新竹</li>
-				<li>南园</li>
-				<li>养生假期</li>
-				<li>心灵养生课程</li>
-				</ul>
-				</div>
-        	</div>  
-			<div class="col-sm-2">     
-				<%= image_tag 'taiwan/tw_modal_bus.png', class: 'tw_modal_bus hidden-xs'%> 
-        	</div>  
-			<div class="col-sm-2"> 
-				<div class="diamond">
-						<div class="diamond-inner"> DAY 3 </div>
-				</div>	
-				<div class="modal_inner_content">				    
-				來到二崁聚落，彷彿走進時空隧道一般，處處可見石磚紅瓦所建造的傳統房舍，腳下的不是柏油路，而是傳統的石磚。走在街道上，隨處可以見到家家戶戶放置在門口的古甕，裡頭裝的是傳統的醃製食品。
-				</div>
-        	</div>          	        	        	       	        	
-        </div>
-        
-      </div>
-    </div>
-
-  </div>
-</div>
+<%= render 'taiwan/tw_1'%>

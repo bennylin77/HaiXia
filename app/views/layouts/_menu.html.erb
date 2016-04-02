@@ -13,9 +13,9 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">台灣 <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu" style="padding-top: 20px; padding-bottom: 20px;">
                     <li class="page-scroll"><a href="#section_products_TW_1">專業參訪</a></li>
-                    <li class="page-scroll"><a href="#">頂級慢活</a></li>
-                    <li class="page-scroll"><a href="#">專業培訓</a></li>
-                    <li class="page-scroll"><a href="#">醫美健檢</a></li>
+                    <li class="page-scroll"><a href="#section_products_TW_2">頂級慢活</a></li>
+                    <li class="page-scroll"><a href="#section_products_TW_3">專業培訓</a></li>
+                    <li class="page-scroll"><a href="#section_products_TW_4">醫美健檢</a></li>
                   </ul>
             </li>
             <li class="page-scroll">
@@ -43,13 +43,10 @@ $(document).ready(function () {
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
      isClosed = false;
-
     trigger.click(function () {
       hamburger_cross();      
     });
-
     function hamburger_cross() {
-
       if (isClosed == true) {          
         overlay.hide();
         trigger.removeClass('is-open');
@@ -62,7 +59,6 @@ $(document).ready(function () {
         isClosed = true;
       }
   }
-  
   $('[data-toggle="offcanvas"]').click(function () {
         $('#wrapper').toggleClass('toggled');
   });  
