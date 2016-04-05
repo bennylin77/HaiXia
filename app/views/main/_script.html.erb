@@ -67,10 +67,53 @@
 	new ScrollMagic.Scene({triggerElement: ".about_manager_content"})
 				  .setTween(tween)
 				  .addTo(controller)    
+	//taiwan			  
+	tween = new TimelineLite();
+	tween.to(".taiwan_section_image_1", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_2", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_3", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".taiwan_section_image_4", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".taiwan_section_image_5", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".taiwan_section_image_6", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".taiwan_section_image_7", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+	
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: ".taiwan_section_top_1"})
+				  .setTween(tween)
+				  .addTo(controller)
+
+	tween = new TimelineLite();
+	tween.to(".taiwan_section_image_8", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_9", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_10", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+		 .to(".taiwan_section_image_11", 1, {autoAlpha: 1, ease: Linear.easeNone})		 
+	
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: ".taiwan_section_top_2"})
+				  .setTween(tween)
+				  .addTo(controller)
+				  
+	tween = new TimelineLite();
+	tween.to(".taiwan_section_image_12", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_13", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_14", 1, {autoAlpha: 1, ease: Linear.easeNone})		 					  
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: ".taiwan_section_top_3"})
+				  .setTween(tween)
+				  .addTo(controller)			
+				  
+	tween = new TimelineLite();
+	tween.to(".taiwan_section_image_15", 1, {autoAlpha: 1, ease: Linear.easeNone})	
+	tween.to(".taiwan_section_image_16", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_17", 1, {autoAlpha: 1, ease: Linear.easeNone})
+		 .to(".taiwan_section_image_18", 1, {autoAlpha: 1, ease: Linear.easeNone})					  	  
+	tween.timeScale(3) //play faster   
+	new ScrollMagic.Scene({triggerElement: ".taiwan_section_top_4"})
+				  .setTween(tween)
+				  .addTo(controller)
 				  
 
-
-
+	//china north korea
 	var tween = new TweenMax.from(".china_north_korea_words_2", 1, {scale:0});   
 	new ScrollMagic.Scene({triggerElement: ".china_background"})
 				  .setTween(tween)

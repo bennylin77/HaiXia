@@ -432,6 +432,7 @@ html {height: 100%;}
   background-position: center center;
   background-size: cover;  
   position: relative;
+  visibility: hidden;
 }
 
 /*
@@ -548,7 +549,7 @@ html {height: 100%;}
   line-height: 200px;
 }
 
-#carousel-example-generic .carousel-inner .item{
+.carousel-example-generic .carousel-inner .item{
   background-image: url(<%=asset_path 'taiwan/tw_modal_bg.jpg'%>);  
   background-attachment: scroll;
   background-position: center center;   
@@ -609,6 +610,8 @@ html {height: 100%;}
   vertical-align:middle;
   text-align:center;
 }
+
+
 .modal_inner_content{
   margin-top: 30px;
   font-weight: bold;
@@ -621,6 +624,32 @@ html {height: 100%;}
   list-style-type: none;
   margin-top: 5px;
 }
+
+
+
+.modal_inner_training{
+  font-weight: bold;
+}
+.modal_inner_training ul{
+  padding: 0px;
+  margin: 0px;
+}
+.modal_inner_training ul li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.modal_inner_training_title{
+  background: #1a1a1a; 
+  margin: 0 auto;
+  width: 200px;
+  color: #f1f1f1;
+}
+.modal_inner_training_description{
+  margin-bottom: 5px;
+}
+
+
+
 
 .tw_modal_bag{
   width: 87px;
